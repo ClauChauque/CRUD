@@ -1,0 +1,27 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Stock</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of listProducts" class="table-active">
+      <th>{{data.name}}</th>
+      <td>{{data.description}}</td>
+      <td>{{data.price | currency:'USD'}}</td>
+      <td>{{data.stock}}</td>
+      <td>
+        <button [routerLink]="['/add',data._id]" type="button" class="btn btn-info btn-sm">Editar</button>
+        <button (click)="eliminarProducto(data._id)" style="margin-left:18px;" type="button" class="btn btn-primary btn-sm" >Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <button type="button" class="btn btn-light" routerLink="/add">Agregar producto</button>
+</div>

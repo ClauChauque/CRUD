@@ -1,0 +1,20 @@
+<form [formGroup]="productoForm" (ngSubmit)="agregarProducto()" style="margin-top: 50px;">
+
+    <div class="container">
+        <input type="text" class="form-control" formControlName="name" placeholder="Ingrese nombre">
+
+        <input style="margin-top: 15px;" type="text" class="form-control" formControlName="description" placeholder="Ingrese descripción">
+        
+        <input style="margin-top: 15px;" type="text"class="form-control" formControlName="price" placeholder="Ingrese precio">
+        
+        <input style="margin-top: 15px;" type="text" class="form-control" formControlName="stock" placeholder="Ingrese stock">
+    </div>
+
+    <div style="display:flex; align-items:center; justify-content:center; margin-top: 15px;">
+
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <button routerLink="/" type="button" class="btn btn-secondary" style="margin-left: 10px;">Volver</button>
+        
+    </div>
+
+</form>
