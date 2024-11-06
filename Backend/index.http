@@ -1,0 +1,26 @@
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+"name": "Surtido Bagleys",
+"description": "Galletitas",
+"price": 500,
+"stock": 10
+}
+
+###
+GET http://localhost:3000/api/productos/
+
+###
+DELETE http://localhost:3000/api/productos/6541985a3883eb02580aad45
+
+###
+PUT http://localhost:3000/api/productos/654aca3b660066789076236e
+Content-Type: application/json
+
+{
+    "name": "Pepsi",
+    "description": "Bebida gaseosa",
+    "price": 800,
+    "stock": 100
+}
